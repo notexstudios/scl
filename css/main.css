@@ -21,7 +21,7 @@ main div.main-div{
   z-index: 0;
   height:95vh;
   width: 100%;
-  background-image: url(/img/bg.jpg);
+  background-image: url(../img/bg.jpg);
   opacity: 80%;
   background-size:cover;
   background-repeat: no-repeat;
