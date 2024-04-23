@@ -1,0 +1,335 @@
+/*google fornts repo directory sc*/
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* initalization to zero sc */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Jost', sans-serif;
+   transition: .4s ease-in-out;
+   scroll-behavior: smooth;
+   text-decoration: none;
+}
+
+
+/* color for span tag element sc */
+span{
+  color: var(--cl);
+}
+
+/* root variables decleration sc */
+
+:root {
+  --bg: #ffffff;
+  --secondClrBg: #333;
+  --cl: #56bcd5;
+  --fontClr: #191223f6;
+  --fontClr2: #fff;
+  --bgHero:#bd9c43;
+}
+
+/* changing text to capital for special items in page sc */
+h1,
+h2,
+a,
+::placeholder {
+   text-transform: capitalize;
+}
+
+/* editing input fields sc */
+input {
+  border: none;
+  outline: none;
+}
+
+/* whole section first code sc */
+section {
+  position: relative;
+  padding: 6%;
+}
+
+/* body background color sc */
+body{
+  background-color: var(--fontClr2);
+}
+
+/* ------------ Landing Page Header section sc----------- */
+
+/* header initial properties sc  */
+header {
+  width: 100%;
+  background-color: var(--bg);
+  position: fixed;
+  height: 4.75rem;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 15px 3%;
+  z-index: 1099;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top:15px;
+  animation: slideBottom .6s ease forwards;
+  animation-delay: calc(.001s * var(--i));
+  box-shadow: 0 0 10rem var(--secondClrBg) ;
+  border-bottom: .5px solid #b3a9a9;
+}
+
+
+/* responsive design navbar sc*/
+header .fa-bars {
+  font-size: 25px;
+  color: var(--cl);
+  padding: 15px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: none;
+  z-index: 1101;
+}
+
+/* setting up logo element sc */
+header .logo .logo-img {
+  width:180px;
+  position: relative;
+  top:8px;
+  z-index: 1101;
+  animation: slideRight .6s ease forwards;
+  animation-delay: calc(.001s * var(--i));
+}
+
+/* anchor elements in navbar sc */
+header .navbar a {
+  font-size: 18px;
+  color: var(--cl);
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 2px;
+  font-weight: 600;
+  animation: slideLeft .6s ease forwards;
+  animation-delay: calc(.001s * var(--i));
+}
+
+/* changing navbar display property sc */
+nav.navbar {
+  display: flex;
+  z-index: 1101;
+  background-color: var(--bg);
+}
+
+/* special div element property sc */
+header div.nav-special-elements{
+  margin-left: 100px;
+  background-color: var(--cl);
+  padding:5px 10px;
+  border: 2px solid var(--cl);
+  border-radius: 50px; 
+  box-shadow: 0 0 .5rem var(--cl);
+  animation: slideLeft .6s ease forwards;
+  animation-delay: calc(.001s * var(--i));
+}
+
+header div.nav-special-elements a{
+  color: var(--fontClr);
+  font-size: 20px;
+
+}
+
+/* special div hover property sc */
+header div.nav-special-elements:hover{
+  background-color: var(--secondClrBg);
+  border: 2px solid var(--secondClrBg);
+  border-radius: 30px; 
+  box-shadow: 0 0 1.25rem var(--cl);
+}
+
+header div.nav-special-elements a:hover{
+  color: var(--cl);
+}
+
+/* header .navbar .nav-special-elements a::after{
+  color: var(--cl);
+  content: '';
+  position: absolute;
+  right: 55px; top: 55px;
+  width: 145px;
+  height: .1rem;
+  border-block: .1rem solid var(--cl);
+  transform: scaleX(0.2);
+  opacity: 0;
+  transition: 900ms ease;
+}
+
+header .navbar .nav-special-elements a:is(:hover, :focus-visible)::after{
+  color: var(--cl);
+  transform: scaleX(1);
+  opacity: 1;
+} */
+
+
+
+
+/* changing the header properties sc */
+
+
+/* hover transition for anchors in navbar sc */
+/* header .navbar a:hover {
+  border: 2px solid var(--cl);
+  color: var(--cl);
+  box-shadow: 0 0 1rem var(--cl);
+  background-color: #ccc;
+}
+*/
+header .navbar .nav-all-elements a.nav-el{
+  position: relative;
+  max-width: max-content;
+  top:12px;
+  
+} 
+
+header .navbar .nav-all-elements a.nav-el:hover{
+  color: var(--cl);
+}
+
+header .navbar .nav-all-elements a.nav-el::after{
+  color: var(--cl);
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 100%;
+  height: .2rem;
+  border-block: .1rem solid var(--cl);
+  transform: scaleX(0.2);
+  opacity: 0;
+  transition: 900ms ease;
+}
+
+header .navbar .nav-all-elements a.nav-el:is(:hover, :focus-visible)::after{
+  color: var(--cl);
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+header nav.navbar{
+  background-color: var(--bg);
+}
+
+/* making the header responsive for smaller devices */
+
+@media (max-width:1130px) {
+
+  
+  header nav.navbar {    
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background-color: var(--bg);
+    padding: 20px;
+    padding-bottom: 700px;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+    height:100dvh;
+ }
+  header nav a{
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+  }
+  header .fa-bars{
+    display: block;
+  }
+
+header .navbar .nav-special-elements{
+  display: block;
+  margin:0;
+  padding-top:0;
+  position: absolute;
+  bottom:180px;
+  animation: slideTop .6s ease forwards;
+  
+}
+
+header .navbar .nav-special-elements a{
+  display: block;
+  margin:0;
+  animation: slideTop .6s ease forwards;
+}
+  
+header .navbar .nav-all-elements{
+  display:block;
+  position: absolute;
+  top:25px;
+  text-align: center;
+  justify-content: center;
+}
+
+header .navbar .nav-all-elements a{
+  text-align: center;
+  margin-top: 25px;
+  animation: slideBottom .6s ease forwards;
+}
+}
+
+header .navbar.active{
+  display: flex;
+  transition: all .3s ease;
+  animation-name: 'slideBottom';
+  animation-duration: .3s ease;
+  background-color: var(--bg);
+}
+
+
+
+/* animations sections */
+@keyframes slideTop {
+  0% {
+     transform: translatey(100px);
+     opacity: 0;
+  }
+
+  100% {
+     transform: translatey(0px);
+     opacity: 1;
+  }
+}
+
+@keyframes slideBottom {
+  0% {
+     transform: translatey(-100px);
+     opacity: 0;
+  }
+
+  100% {
+     transform: translatey(0px);
+     opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+     transform: translatex(100px);
+     opacity: 0;
+  }
+
+  100% {
+     transform: translatex(0px);
+     opacity: 1;
+  }
+}
+
+@keyframes slidescel {
+  0% {
+     transform: scale(0);
+     opacity: 0;
+  }
+
+  100% {
+     transform: scale(1);
+     opacity: 1;
+  }
+}
+
